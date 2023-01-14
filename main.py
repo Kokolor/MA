@@ -1,8 +1,5 @@
 import tkinter as tk
 import time
-import os
-
-os.system(r'reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v "NotePadK" /t REG_SZ /d "main.py"')
 
 def change_color():
     colors = ["red", "green", "blue", "yellow", "purple"]
